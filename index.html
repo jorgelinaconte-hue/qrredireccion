@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirección Comercial</title>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const target = urlParams.get('to');
+        if (target) {
+            window.location.replace(target);
+        }
+    </script>
+</head>
+<body style="background:#0f172a; color:white; font-family:sans-serif; text-align:center; padding-top:20vh;">
+    <h2>Redirigiendo a tu destino...</h2>
+    <p>Si no redirige automáticamente, <a id="link" style="color:#38bdf8;" href="#">hacé clic acá</a>.</p>
+    <script>
+        if(target) {
+            document.getElementById('link').href = target;
+        }
+    </script>
+</body>
+</html>
